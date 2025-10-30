@@ -63,7 +63,7 @@ A simple and user-friendly Discord bot that plays music from your local MP3 file
 
 1. **Locate Your Bot Files**
    - You should have these files in a folder:
-     - `bot.exe` (the bot program)
+     - `run-bot.bat` (the bot program)
      - `ffmpeg.exe` (audio processor - must be in same folder!)
      - `.env` (configuration file)
 
@@ -77,11 +77,11 @@ A simple and user-friendly Discord bot that plays music from your local MP3 file
    Example `.env` file:
    ```
    DISCORD_BOT_TOKEN=MTI3ODUzMzQ2MDI2ODY3OTE4MA.GE-ooJ.hVpnCaAOy0tyqGuOGivb
-   PREFIX=!
+   PREFIX=;;
    ```
 
 3. **Add Your Music**
-   - Create a folder called `songs` in the same location as `bot.exe`
+   - Create a folder called `songs` in the same location as `run-bot.bat`
    - Put your `.mp3` files in this folder
    - The bot will automatically find and play them!
 
@@ -118,27 +118,27 @@ A simple and user-friendly Discord bot that plays music from your local MP3 file
 2. Type commands in any text channel:
 
 **Available Commands:**
-- `!help` - Show all available commands
-- `!play` - Plays all songs in the songs folder
-- `!play song name` - Plays a specific song (without .mp3)
-- `!skip` - Skip to the next song
-- `!pause` - Pause the current song
-- `!resume` - Resume playback
-- `!stop` - Stop playing and clear the queue
-- `!queue` - Show what's coming up next
-- `!list` - See all available songs
+- `;;help` - Show all available commands
+- `;;play` - Plays all songs in the songs folder
+- `;;play song name` - Plays a specific song (without .mp3)
+- `;;skip` - Skip to the next song
+- `;;pause` - Pause the current song
+- `;;resume` - Resume playback
+- `;;stop` - Stop playing and clear the queue
+- `;;queue` - Show what's coming up next
+- `;;list` - See all available songs
 
 **Examples:**
 ```
-!play                    (plays all songs)
-!play Feral Guardians    (plays specific song)
-!skip                    (skip current song)
-!list                    (see all songs)
+;;play                    (plays all songs)
+;;play Feral Guardians    (plays specific song)
+;;skip                    (skip current song)
+;;list                    (see all songs)
 ```
 
 ## 🔧 For Developers
 
-If you want to run from source code instead of bot.exe:
+If you want to run from source code instead of run-bot.bat:
 
 ### Installation
 
@@ -151,7 +151,7 @@ npm install
 Edit `.env` and add your bot token:
 ```
 DISCORD_BOT_TOKEN=your_token_here
-PREFIX=!
+PREFIX=;;
 ```
 
 ### Running
@@ -171,7 +171,7 @@ npm run dev
 - `src/index.js` - Main bot code
 - `songs/` - Place your .mp3 files here (in root directory)
 - `.env` - Configuration file
-- `bot.exe` - Compiled executable (built with Nexe)
+- `run-bot.bat` - Compiled executable (built with Nexe)
 
 ## ❓ FAQ / Troubleshooting
 
@@ -181,7 +181,7 @@ npm run dev
 
 **Solutions**:
 - Make sure you have a `.env` file with your bot token filled in
-- Check that `ffmpeg.exe` is in the same folder as `bot.exe`
+- Check that `ffmpeg.exe` is in the same folder as `run-bot.bat`
 - The bot now shows error messages before closing - read them carefully!
 
 ---
@@ -221,9 +221,9 @@ npm run dev
 **Problem**: Audio processing tool is missing.
 
 **Solutions**:
-- Make sure `ffmpeg.exe` is in the **same folder** as `bot.exe`
+- Make sure `ffmpeg.exe` is in the **same folder** as `run-bot.bat`
 - If you're missing `ffmpeg.exe`:
-  - For bot.exe users: Copy it from `node_modules/ffmpeg-static/ffmpeg.exe`
+  - For run-bot.bat users: Copy it from `node_modules/ffmpeg-static/ffmpeg.exe`
   - Or download from: https://www.gyan.dev/ffmpeg/builds/
 - Both files must be in the same directory
 
@@ -235,10 +235,10 @@ npm run dev
 
 **Solutions**:
 1. Check that MESSAGE CONTENT intent is enabled (see above)
-2. Make sure you're using the correct prefix (default is `!`)
+2. Make sure you're using the correct prefix (default is `;;`)
 3. Verify the bot has "Read Messages" permission in the channel
 4. Check that the bot is actually online (green status in Discord)
-5. Try the command `!help` to test
+5. Try the command `;;help` to test
 
 ---
 
@@ -247,7 +247,7 @@ npm run dev
 **Problem**: Bot can't find your music.
 
 **Solutions**:
-- Create a `songs` folder in the same location as `bot.exe` if it doesn't exist
+- Create a `songs` folder in the same location as `run-bot.bat` if it doesn't exist
 - Make sure your music files have the `.mp3` extension
 - Check that the files are directly in the `songs` folder (not in subfolders)
 - Restart the bot after adding songs
@@ -256,7 +256,7 @@ npm run dev
 
 ### Bot can't join voice channel
 
-**Problem**: Bot doesn't connect when you use `!play`.
+**Problem**: Bot doesn't connect when you use `;;play`.
 
 **Solutions**:
 1. Make sure **you** are in a voice channel first
@@ -304,8 +304,8 @@ npm run dev
 ### How do I stop the bot?
 
 **Solutions**:
-- Type `!stop` in Discord to stop music and disconnect from voice
-- Close the bot.exe window to shut down completely
+- Type `;;stop` in Discord to stop music and disconnect from voice
+- Close the run-bot.bat window to shut down completely
 - Press Ctrl+C in the command window
 
 ---
@@ -382,7 +382,7 @@ Um bot simples e fácil de usar para Discord que toca músicas dos seus arquivos
 
 ## 📋 O Que Você Precisa
 
-- PC com Windows (para o bot.exe)
+- PC com Windows (para o run-bot.bat)
 - Conta no Discord
 - Arquivos de música MP3 que você quer tocar
 - Conexão com internet
@@ -431,7 +431,7 @@ Um bot simples e fácil de usar para Discord que toca músicas dos seus arquivos
 
 1. **Localize os Arquivos do Bot**
    - Você deve ter estes arquivos em uma pasta:
-     - `bot.exe` (o programa do bot)
+     - `run-bot.bat` (o programa do bot)
      - `ffmpeg.exe` (processador de áudio - deve estar na mesma pasta!)
      - `.env` (arquivo de configuração)
 
@@ -445,18 +445,18 @@ Um bot simples e fácil de usar para Discord que toca músicas dos seus arquivos
    Exemplo de arquivo `.env`:
    ```
    DISCORD_BOT_TOKEN=MTI3ODUzMzQ2MDI2ODY3OTE4MA.GE-ooJ.hVpnCaAOy0tyqGuOGivb
-   PREFIX=!
+   PREFIX=;;
    ```
 
 3. **Adicione Suas Músicas**
-   - Crie uma pasta chamada `songs` no mesmo local do `bot.exe`
+   - Crie uma pasta chamada `songs` no mesmo local do `run-bot.bat`
    - Coloque seus arquivos `.mp3` nesta pasta
    - O bot vai encontrá-los automaticamente!
 
    A estrutura de pastas deve ficar assim:
    ```
    📁 discord-local-music-bot-main/
-   ├── bot.exe
+   ├── run-bot.bat
    ├── ffmpeg.exe
    ├── .env
    ├── README.md
@@ -468,7 +468,7 @@ Um bot simples e fácil de usar para Discord que toca músicas dos seus arquivos
 
 ### Passo 3: Executar o Bot
 
-1. **Clique duas vezes em `bot.exe`**
+1. **Clique duas vezes em `run-bot.bat`**
 2. Você deve ver mensagens como:
    ```
    ✓ FFmpeg configured successfully
@@ -486,27 +486,27 @@ Um bot simples e fácil de usar para Discord que toca músicas dos seus arquivos
 2. Digite comandos em qualquer canal de texto:
 
 **Comandos Disponíveis:**
-- `!help` - Mostra todos os comandos disponíveis
-- `!play` - Toca todas as músicas da pasta songs
-- `!play nome da música` - Toca uma música específica (sem o .mp3)
-- `!skip` - Pula para a próxima música
-- `!pause` - Pausa a música atual
-- `!resume` - Retoma a reprodução
-- `!stop` - Para de tocar e limpa a fila
-- `!queue` - Mostra o que vem a seguir
-- `!list` - Vê todas as músicas disponíveis
+- `;;help` - Mostra todos os comandos disponíveis
+- `;;play` - Toca todas as músicas da pasta songs
+- `;;play nome da música` - Toca uma música específica (sem o .mp3)
+- `;;skip` - Pula para a próxima música
+- `;;pause` - Pausa a música atual
+- `;;resume` - Retoma a reprodução
+- `;;stop` - Para de tocar e limpa a fila
+- `;;queue` - Mostra o que vem a seguir
+- `;;list` - Vê todas as músicas disponíveis
 
 **Exemplos:**
 ```
-!play                    (toca todas as músicas)
-!play Feral Guardians    (toca música específica)
-!skip                    (pula música atual)
-!list                    (vê todas as músicas)
+;;play                    (toca todas as músicas)
+;;play Feral Guardians    (toca música específica)
+;;skip                    (pula música atual)
+;;list                    (vê todas as músicas)
 ```
 
 ## 🔧 Para Desenvolvedores
 
-Se você quiser executar a partir do código fonte ao invés do bot.exe:
+Se você quiser executar a partir do código fonte ao invés do run-bot.bat:
 
 ### Instalação
 
@@ -519,7 +519,7 @@ npm install
 Edite o arquivo `.env` e adicione o token do bot:
 ```
 DISCORD_BOT_TOKEN=seu_token_aqui
-PREFIX=!
+PREFIX=;;
 ```
 
 ### Executar
@@ -539,7 +539,7 @@ npm run dev
 - `src/index.js` - Código principal do bot
 - `songs/` - Coloque seus arquivos .mp3 aqui (no diretório raiz)
 - `.env` - Arquivo de configuração
-- `bot.exe` - Executável compilado (construído com Nexe)
+- `run-bot.bat` - Executável compilado (construído com Nexe)
 
 ## ❓ Perguntas Frequentes / Solução de Problemas
 
@@ -549,7 +549,7 @@ npm run dev
 
 **Soluções**:
 - Certifique-se de ter um arquivo `.env` com o token do bot preenchido
-- Verifique se `ffmpeg.exe` está na mesma pasta que `bot.exe`
+- Verifique se `ffmpeg.exe` está na mesma pasta que `run-bot.bat`
 - O bot agora mostra mensagens de erro antes de fechar - leia-as com atenção!
 
 ---
@@ -589,9 +589,9 @@ npm run dev
 **Problema**: Ferramenta de processamento de áudio está faltando.
 
 **Soluções**:
-- Certifique-se de que `ffmpeg.exe` está na **mesma pasta** que `bot.exe`
+- Certifique-se de que `ffmpeg.exe` está na **mesma pasta** que `run-bot.bat`
 - Se estiver faltando o `ffmpeg.exe`:
-  - Para usuários do bot.exe: Copie de `node_modules/ffmpeg-static/ffmpeg.exe`
+  - Para usuários do run-bot.bat: Copie de `node_modules/ffmpeg-static/ffmpeg.exe`
   - Ou baixe de: https://www.gyan.dev/ffmpeg/builds/
 - Ambos os arquivos devem estar no mesmo diretório
 
@@ -603,10 +603,10 @@ npm run dev
 
 **Soluções**:
 1. Verifique se MESSAGE CONTENT intent está ativado (veja acima)
-2. Certifique-se de estar usando o prefixo correto (padrão é `!`)
+2. Certifique-se de estar usando o prefixo correto (padrão é `;;`)
 3. Verifique se o bot tem permissão "Read Messages" no canal
 4. Confirme que o bot está realmente online (status verde no Discord)
-5. Tente o comando `!help` para testar
+5. Tente o comando `;;help` para testar
 
 ---
 
@@ -615,7 +615,7 @@ npm run dev
 **Problema**: Bot não consegue encontrar suas músicas.
 
 **Soluções**:
-- Crie uma pasta `songs` no mesmo local do `bot.exe` se ela não existir
+- Crie uma pasta `songs` no mesmo local do `run-bot.bat` se ela não existir
 - Certifique-se de que seus arquivos de música têm a extensão `.mp3`
 - Verifique se os arquivos estão diretamente na pasta `songs` (não em subpastas)
 - Reinicie o bot depois de adicionar músicas
@@ -624,7 +624,7 @@ npm run dev
 
 ### Bot não consegue entrar no canal de voz
 
-**Problema**: Bot não conecta quando você usa `!play`.
+**Problema**: Bot não conecta quando você usa `;;play`.
 
 **Soluções**:
 1. Certifique-se de que **você** está em um canal de voz primeiro
@@ -672,8 +672,8 @@ npm run dev
 ### Como eu paro o bot?
 
 **Soluções**:
-- Digite `!stop` no Discord para parar a música e desconectar do canal de voz
-- Feche a janela do bot.exe para desligar completamente
+- Digite `;;stop` no Discord para parar a música e desconectar do canal de voz
+- Feche a janela do run-bot.bat para desligar completamente
 - Pressione Ctrl+C na janela de comando
 
 ---
