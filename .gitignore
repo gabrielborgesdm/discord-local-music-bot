@@ -85,8 +85,7 @@ out
 # Nuxt.js build / generate output
 .nuxt
 dist
-
-songs/*.mp3
+.mp3
 # Gatsby files
 .cache/
 # Comment in the public line in if your project uses Gatsby and not Next.js
