@@ -1,13 +1,13 @@
 @echo off
 REM Discord Local Music Bot Launcher
-REM This keeps the window open if there's an error
+REM Standalone - no installation required!
 
 echo Starting Discord Music Bot...
 echo.
 
 bot.exe
 
-REM If bot.exe exits with an error, pause to show the error
+REM If bot exits with an error, pause to show the error
 if errorlevel 1 (
     echo.
     echo ========================================

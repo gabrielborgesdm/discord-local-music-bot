@@ -14,10 +14,12 @@ A simple and user-friendly Discord bot that plays music from your local MP3 file
 
 ## 📋 What You Need
 
-- Windows PC (for bot.bat)
+- Windows PC
 - Discord account
 - MP3 music files you want to play
 - Internet connection
+
+**No installation required!** Everything is bundled in the exe file.
 
 ## 🚀 Quick Start Guide (For Non-Developers)
 

@@ -2,11 +2,20 @@
   "name": "discord-local-music-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "build": "pkg . --targets node18-win-x64 --output bot.exe"
+  },
+  "bin": "src/index.js",
+  "pkg": {
+    "assets": [
+      "node_modules/sodium-native/**/*",
+      "node_modules/ffmpeg-static/**/*"
+    ],
+    "scripts": "src/**/*.js"
   },
   "keywords": [],
   "author": "",
@@ -16,8 +25,7 @@
     "discord.js": "^14.15.3",
     "dotenv": "^16.4.5",
     "ffmpeg-static": "^5.2.0",
-    "libsodium-wrappers": "^0.7.15",
-    "sodium-native": "^4.1.1"
+    "tweetnacl": "^1.0.3"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"
